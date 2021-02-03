@@ -23,7 +23,7 @@ data = pd.read_csv('train.csv')
 #imgdir = Path('train/')
 #image_name = random.choice(os.listdir(imgdir))
 #image = Image.open('train/' + image_name)
-image = Image.open('train/' + uploaded_file.name)
+image = Image.open(uploaded_file.name)
 
     
 st.write(f"Nom du fichier : {uploaded_file.name}")
