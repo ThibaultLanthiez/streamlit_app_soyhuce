@@ -16,7 +16,7 @@ st.write("""
 # My web application : whales tail
 """)
 
-uploaded_file = st.file_uploader("Upload Files",type=['png','jpeg'])
+uploaded_file = st.file_uploader("Upload Files",type=['jpg','png','jpeg'])
 
 data = pd.read_csv('train.csv')
 
