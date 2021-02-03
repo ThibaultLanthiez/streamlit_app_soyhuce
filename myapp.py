@@ -18,7 +18,6 @@ st.write("""
 
 uploaded_file = st.file_uploader("Upload Files",type=['jpg','png','jpeg'])
 image = Image.open(uploaded_file)
-st.image(image,width=250,height=250)
 
 data = pd.read_csv('train.csv')
     
@@ -26,9 +25,9 @@ st.write(f"Nom du fichier : {uploaded_file.name}")
 st.write(f"Taille : {image.size}")
 id_bal = data[data['Image'] == uploaded_file.name]['Id']
 st.write(id_bal)
-st.image(image)
+st.image(image,width=500,height=500)
 
-#model = load_model('model.hdf5')
+model = load_model('model.hdf5')
 
 #def load(filename):
 #   np_image = Image.open(filename)
