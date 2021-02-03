@@ -8,11 +8,11 @@ from keras.models import load_model
 import numpy as np
 from keras.preprocessing.image import ImageDataGenerator
 
-
 st.write("""
 # My web application : whales tail
 """)
 
+uploaded_file = st.file_uploader("Upload Files",type=['png','jpeg'])
 
 data = pd.read_csv('train.csv')
 
