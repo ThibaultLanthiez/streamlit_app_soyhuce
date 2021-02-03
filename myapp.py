@@ -4,10 +4,9 @@ import random # Piocher au hasard des images
 import os # Acces aux fonctions systèmes 
 from PIL import Image # Manipulation d'images
 import pandas as pd
-import keras
-from keras.models import load_model
+from tensorflow.keras.models import load_model
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
 import numpy as np
-from keras.preprocessing.image import ImageDataGenerator
 
 from PIL import Image
 import numpy as np
