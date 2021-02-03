@@ -17,7 +17,7 @@ st.write("""
 """)
 
 uploaded_file = st.file_uploader("Upload Files",type=['jpg','png','jpeg'])
-img = load_image(image_file)
+img = utils.load_image(image_file)
 st.image(img,width=250,height=250)
 
 
