@@ -8,6 +8,10 @@ from keras.models import load_model
 import numpy as np
 from keras.preprocessing.image import ImageDataGenerator
 
+from PIL import Image
+import numpy as np
+from skimage import transform
+
 st.write("""
 # My web application : whales tail
 """)
@@ -16,21 +20,19 @@ uploaded_file = st.file_uploader("Upload Files",type=['png','jpeg'])
 
 data = pd.read_csv('train.csv')
 
-imgdir = Path('train/')
-image_name = random.choice(os.listdir(imgdir))
-image = Image.open('train/' + image_name)
+#imgdir = Path('train/')
+#image_name = random.choice(os.listdir(imgdir))
+#image = Image.open('train/' + image_name)
+image = Image.open('train/' + uploaded_file.name)
+
     
-st.write(f"Nom du fichier : {image_name}")
+st.write(f"Nom du fichier : {uploaded_file.name}")
 st.write(f"Taille : {image.size}")
-id_bal = data[data['Image'] == image_name]['Id']
+id_bal = data[data['Image'] == uploaded_file.name]['Id']
 st.write(id_bal)
 st.image(image)
 
 model = load_model('model.hdf5')
-
-from PIL import Image
-import numpy as np
-from skimage import transform
 
 def load(filename):
    np_image = Image.open(filename)
