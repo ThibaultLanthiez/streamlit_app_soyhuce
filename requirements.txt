@@ -4,5 +4,3 @@ keras
 Pillow
 streamlit
 tensorflow
-skimage 
-scikit-image
