@@ -30,7 +30,8 @@ model = load_model('model.hdf5')
 
 from PIL import Image
 import numpy as np
-from skimage import transform
+from scikit-image import transform
+#from skimage import transform
 
 def load(filename):
    np_image = Image.open(filename)
