@@ -7,7 +7,6 @@ import pandas as pd
 from keras.models import load_model
 from keras.preprocessing.image import ImageDataGenerator
 import numpy as np
-import utils
 
 from PIL import Image
 import numpy as np
@@ -18,7 +17,7 @@ st.write("""
 """)
 
 uploaded_file = st.file_uploader("Upload Files",type=['jpg','png','jpeg'])
-img = utils.load_image(image_file)
+img = Image.open(uploaded_file)
 st.image(img,width=250,height=250)
 
 
