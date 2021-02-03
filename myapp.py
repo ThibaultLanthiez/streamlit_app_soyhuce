@@ -17,14 +17,15 @@ st.write("""
 """)
 
 uploaded_file = st.file_uploader("Upload Files",type=['jpg','png','jpeg'])
+img = load_image(image_file)
+st.image(img,width=250,height=250)
+
 
 data = pd.read_csv('train.csv')
 
 #imgdir = Path('train/')
 #image_name = random.choice(os.listdir(imgdir))
 #image = Image.open('train/' + image_name)
-image = Image.open(uploaded_file.name)
-
     
 st.write(f"Nom du fichier : {uploaded_file.name}")
 st.write(f"Taille : {image.size}")
