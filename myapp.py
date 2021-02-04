@@ -3,7 +3,6 @@ from PIL import Image # Manipulation d'images
 import pandas as pd
 from tensorflow.keras.models import load_model
 import numpy as np 
-from skimage import transform
 
 st.write("""
 # Web application : humpback whale identification
@@ -29,7 +28,6 @@ if uploaded_file != None:
    # Reformatage de l'image
    def load(np_image):
       np_image = np.array(np_image).astype('float32')/255
-      np_image = transform.resize(np_image, (224, 224, 3))
       np_image = np.expand_dims(np_image, axis=0)
       return np_image
 
