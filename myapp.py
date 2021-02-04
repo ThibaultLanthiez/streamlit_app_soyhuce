@@ -34,5 +34,4 @@ if uploaded_file != None:
    # Affichage de l'image
    image = load(image)
    
-   st.write("*Inference not available*...")
-   st.write("(go to local version)")
+   st.write("*Inference not available*... (go to local version)")
