@@ -10,7 +10,7 @@ import numpy as np
 
 from PIL import Image
 import numpy as np
-from skimage import transform
+#from skimage import transform
 
 st.write("""
 # My web application : whales tail
