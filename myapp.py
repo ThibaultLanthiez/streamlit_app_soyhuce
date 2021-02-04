@@ -20,7 +20,7 @@ if uploaded_file != None:
       
    # Informations sur l'image   
    st.write(f"**File name** : {uploaded_file.name}")
-   st.write(f"**image shape** : {image.size}")
+   st.write(f"**Image shape** : {image.size}")
    id_bal = data[data['Image'] == uploaded_file.name]['Id']
    st.write(f"**Id** : {id_bal.values}")
    st.image(image,width=700,height=700)
