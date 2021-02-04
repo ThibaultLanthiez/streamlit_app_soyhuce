@@ -1,5 +1,5 @@
 import streamlit as st
-from PIL import Image # Manipulation d'images
+from PIL import Image
 import pandas as pd
 from tensorflow.keras.models import load_model
 import numpy as np 
@@ -34,4 +34,5 @@ if uploaded_file != None:
    # Affichage de l'image
    image = load(image)
    
-   st.write("*Inference not available*")
+   st.write("*Inference not available*...")
+   st.write("(go to local version)")
